@@ -47,7 +47,8 @@ nav ul li a{
 
 nav ul li a:hover{
     font-size: 1.4em; 
-    text-shadow: 0.3em 0.3em 0.25em rgb(121, 121, 121); 
+    text-shadow: 0.3em 0.3em 0.25em rgb(121, 121, 121);
+    color: black; 
 }
 
 body{
@@ -202,6 +203,7 @@ p,
     margin-bottom: 25px;
     font-size: 1.25rem;
     font-family: 'Grandstander';
+    font-weight: bold;
 }
 
 .pie-pagina .grupo-1 .box p{
