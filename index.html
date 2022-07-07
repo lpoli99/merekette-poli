@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ad0a91fd1e.js" crossorigin="anonymous"></script>
+    <!-- <script src="nav.js/nav.js" defer></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -13,12 +14,74 @@
     <!-- Ícono de pestaña -->
     <link rel="shortcut icon" href="media/sublogo.jpg">
     <link rel="stylesheet" href="css/style.css">
+    <script src="nav.js/nav.js"></script>
 </head>
 <body>
     
-    <header>
-              
-        <nav>
+    
+        
+        <nav class="menu">
+            <label class="logo-nav"> Animaciones Merekette</label>
+            <!-- <img src="media/logoFooter.png" alt="Logo de Animaciones Merekette" id="imgLogo" > -->
+            <ul class="menu_items">
+                <li class="active"> 
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li> 
+                    <a href="servicios.html">Servicios</a>
+                </li>
+                <li> 
+                    <a href="inflables.html">Inflables</a>
+                </li>
+                <li> 
+                    <a href="galeria.html">Galeria</a>
+                </li>
+                <li> 
+                    <a href="opyfaq.html">Opiniones y FAQ</a>
+                </li>
+            </ul>
+
+            <span class="btn_menu">
+                <i class="fa fa-bars"></i>
+            </span>
+        </nav> 
+         
+        
+        
+        
+        
+        
+        
+        
+        <!-- <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="media/logotransp.png" alt="" id="imgLogo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-evenly" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Inflables</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Opiniones y FAQ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav> -->
+         
+        <!-- <nav>
             
             <img src="media/logotransp.png" alt="Logo de Animaciones Merekette" id="imgLogo">
             
@@ -30,15 +93,27 @@
                 <li> <a href="opyfaq.html">Opiniones y FAQ</a></li>
             </ul>
 
-        </nav>
+        </nav> -->
 
-    </header>
+    
     
     <main id="mainInicio">
         
         <section>
             
-            <img src="media/imginicio2.jpg" alt="Imagen de los Animadores" id="imgInicio">
+            <div id="carouselExampleSlidesOnly" class="carousel slide carrousel-inicio" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="media/imginicio2.jpg" class="d-block w-100 img-carousel" alt="Animadores" >
+                  </div>
+                  <div class="carousel-item">
+                    <img src="media/imginicio3.jpg" class="d-block w-100 img-carousel" alt="Evento">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="media/imginicio4.jpg" class="d-block w-100 img-carousel" alt="Evento">
+                  </div>
+                </div>
+            </div>
             
             <hr>
         
