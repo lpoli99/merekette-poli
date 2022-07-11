@@ -8,8 +8,9 @@
 }
 /* Inicio Nav */
 .navbar-brand{
-    font-family: 'Grandstander';
+    font-family: 'Fredoka One';
     font-weight: bolder;
+    font-size: 1.56rem;
 }
 
 .nav-link{
@@ -36,6 +37,10 @@ body{
     font-family: 'Grandstander';
     font-size: large;
     font-weight: 500;
+}
+
+.card-text{
+    font-family: 'Grandstander';
 }
 
 /* Inicio Footer */
