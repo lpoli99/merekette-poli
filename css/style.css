@@ -9,7 +9,7 @@
 /* Inicio Nav */
 .navbar-brand{
     font-family: 'Fredoka One';
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 1.56rem;
 }
 
@@ -28,9 +28,11 @@ body{
 /* Fin Body */
 
 /* Inicio Main */
-.text-center{
+.text-center,
+.card-title,
+.pregunta{
     font-family: 'Grandstander';
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .texto-inicio,
@@ -40,12 +42,10 @@ body{
     font-weight: 500;
 }
 
-.card-title{
-    font-family: 'Grandstander';
-    font-weight: bold;
-}
-
-.card-text{
+.card-text,
+.textoFaq,
+.texto-op,
+.nombre-op{
     font-family: 'Grandstander';
 }
 
