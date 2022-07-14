@@ -1,0 +1,134 @@
+@import "variables";
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+/* Inicio Nav */
+.navbar-brand{
+    font-family: 'Fredoka One';
+    font-weight: $fuenteBold;
+    font-size: 1.56rem;
+}
+
+.nav-link{
+    font-family: $fuente;
+    font-weight: $fuenteBold;
+}
+/* Fin Nav */
+/* Inicio Body */
+body{
+    background-image: url('../media/fondo1.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Fin Body */
+
+/* Inicio Main */
+.text-center,
+.card-title,
+.pregunta{
+    font-family: $fuente;
+    font-weight: $fuenteBold;
+}
+
+.texto-inicio,
+.texto-inflables{
+    font-family: $fuente;
+    font-size: large;
+    font-weight: 500;
+}
+
+.card-text,
+.textoFaq,
+.texto-op,
+.nombre-op{
+    font-family: $fuente;
+}
+
+
+/* Inicio Footer */
+.pie-pagina{
+    width: 100%;
+    background-color: rgba(156, 156, 156, 0.705);
+    grid-area: footer; 
+    .grupo-1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+        .box figure{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 250px;
+            }
+        }
+        .box h2{
+            color: rgb(59, 59, 59);
+            margin-bottom: 25px;
+            font-size: 1.25rem;
+            font-family: $fuente;
+            font-weight: $fuenteBold;
+        }
+        .box p{
+            color: rgb(70, 70, 70);
+            margin-bottom: 10px;
+            font-family: $fuente;
+            font-size: 0.9375rem;
+        }
+        .red-social a{
+            display: inline-block;
+            text-decoration: none;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: black;
+            margin-right: 10px;
+            background-color: rgb(230, 230, 230);
+            text-align: center;
+            transition: all 300ms ease;
+            &:hover{
+                color: #d31ca0;
+            }
+        }
+    }
+    .grupo-2{
+        background-color: rgba(119, 119, 119, 0.671);
+        padding: 15px 15px;
+        text-align: center;
+        small{
+            font-size: 0.9375rem
+        }
+    }
+}
+/* Fin Footer */
+
+
+@media screen and (max-width: 768px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .pie-pagina .grupo-1 .box h2{
+        text-align: center;
+    }
+
+    .pie-pagina .grupo-1 .red-social{
+        display: flex;
+        justify-content: center;
+    }
+}
