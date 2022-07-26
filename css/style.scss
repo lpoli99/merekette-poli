@@ -22,6 +22,7 @@
 .nav-link{
     font-family: $fuente;
     font-weight: $fuenteBold;
+    font-size: 1.50rem;
 }
 /* Fin Nav */
 /* Inicio Body */
@@ -97,7 +98,6 @@ body{
                             background-color: map-get($map: $colores, $key: blanco);
                         }
                     }
-
                     .card-image{
                         position: relative;
                         @include tamaños(9.375rem, 9.375rem);
@@ -204,18 +204,32 @@ body{
             font-family: $fuente;
             font-size: 0.9375rem;
         }
-        .red-social a{
-            display: inline-block;
-            text-decoration: none;
-            @include tamaños (2.8125rem, 2.8125rem);
-            line-height: 2.8125rem;
-            color: black;
-            margin-right: 0.625rem;
-            background-color: rgb(230, 230, 230);
-            text-align: center;
-            transition: all 300ms ease;
-            &:hover{
-                color: #d31ca0;
+        .red-social{
+            .fa-facebook{
+                display: inline-block;
+                text-decoration: none;
+                @include tamaños (2.8125rem, 2.8125rem);
+                line-height: 2.8125rem;
+                color: black;
+                margin-right: 0.625rem;
+                background-color: rgb(230, 230, 230);
+                text-align: center;
+                transition: all 300ms ease;
+                &:hover{
+                color: map-get($map: $colores, $key: facebook);
+                } 
+            }
+            .fa-instagram{
+                @extend .fa-facebook;
+                &:hover{
+                    color: map-get($map: $colores, $key: instagram);
+                } 
+            }
+            .fa-whatsapp{
+                @extend .fa-facebook;
+                &:hover{
+                    color: map-get($map: $colores, $key: whatsapp);
+                }
             }
         }
     }
