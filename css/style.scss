@@ -1,4 +1,9 @@
 @import "variables";
+@mixin tamaños ($height, $width) {
+    height: $height;
+    width: $width;
+}
+
 *,
 *:before,
 *:after{
@@ -29,6 +34,119 @@ body{
 /* Fin Body */
 
 /* Inicio Main */
+/* Inicio Opiniones */
+
+.opiniones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .slide-container{
+        max-width: 70rem;
+        width: 100%;
+        padding: 2.5rem 0;
+        .slide-content{
+            margin: 0 2.5rem;
+            overflow: hidden;
+            border-radius: 1.5625rem;
+            .card{
+                border-radius: 1.5625rem;
+                background-color: map-get($map: $colores, $key: blanco);
+                .image-content,
+                .card-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0.625rem 0.875rem;
+                }
+                .card-content{
+                    .name{
+                        font-family: $fuente;
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                        color: map-get($map: $colores, $key: grisOscuro);
+                    }
+                    .description{
+                        font-family: $fuente;
+                        font-size: 0.875rem;
+                        color: map-get($map: $colores, $key: grisClaro);
+                        text-align: center;
+                    }
+                }
+                .image-content{
+                    position: relative;
+                    row-gap: 0.3125rem;
+                    padding: 1.5625rem 0;
+                    .overlay{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        @include tamaños (100%, 100%);
+                        background-color: map-get($map: $colores, $key: fondoCard);
+                        border-radius: 1.5625rem 1.5625rem 0 1.5625rem;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            bottom: -2.5rem;
+                            @include tamaños (2.5rem, 2.5rem);
+                            background-color: map-get($map: $colores, $key: fondoCard);
+                        }
+                        &::after{ 
+                            @extend ::before;
+                            border-radius: 0 1.5625rem 0 0;
+                            background-color: map-get($map: $colores, $key: blanco);
+                        }
+                    }
+
+                    .card-image{
+                        position: relative;
+                        @include tamaños(9.375rem, 9.375rem);
+                        border-radius: 50%;
+                        background-color: map-get($map: $colores, $key: blanco);
+                        padding: 0.1875rem;
+                        .card-img{
+                            @include tamaños (100%, 100%);
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-navBtn{
+            color: map-get($map: $colores, $key: azulOscuro);
+            transition: color 0.3s ease;
+            &:hover{
+                color: map-get($map: $colores, $key: azulClaro);
+            }
+            &::before{
+                font-size: 2.1875rem;
+            }
+            &::after{
+                @extend ::before;
+            }
+        }
+          
+        .swiper-button-next{
+            right: 0;
+        }
+          
+        .swiper-button-prev{
+            left: 0;
+        }
+          
+        .swiper-pagination-bullet{
+            background-color: map-get($map: $colores, $key: azulClaro);
+            opacity: 1;
+        }
+          
+        .swiper-pagination-bullet-active{
+            background-color: map-get($map: $colores, $key: azulOscuro);
+        }
+    }
+}
+  
+/* Fin Opiniones */
 .text-center,
 .card-title,
 .pregunta{
@@ -54,47 +172,45 @@ body{
 /* Inicio Footer */
 .pie-pagina{
     width: 100%;
-    background-color: rgba(156, 156, 156, 0.705);
+    background-color: map-get($map: $colores, $key: grisTransp);
     grid-area: footer; 
     .grupo-1{
         width: 100%;
-        max-width: 1200px;
+        max-width: 75rem;
         margin: auto;
-        display: grid;
+        display: grid; 
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px;
-        padding: 45px 0px;
+        grid-gap: 3.125rem;
+        padding: 2.8125rem 0rem;
         .box figure{
-            width: 100%;
-            height: 100%;
+            @include tamaños (100%, 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             img{
-                width: 250px;
+                width: 15.625rem;
             }
         }
         .box h2{
-            color: rgb(59, 59, 59);
-            margin-bottom: 25px;
+            color: map-get($map: $colores, $key: grish2Footer);
+            margin-bottom: 1.5625rem;
             font-size: 1.25rem;
             font-family: $fuente;
             font-weight: $fuenteBold;
         }
         .box p{
-            color: rgb(70, 70, 70);
-            margin-bottom: 10px;
+            color: map-get($map: $colores, $key: grispFooter);
+            margin-bottom: 0.625rem;
             font-family: $fuente;
             font-size: 0.9375rem;
         }
         .red-social a{
             display: inline-block;
             text-decoration: none;
-            width: 45px;
-            height: 45px;
-            line-height: 45px;
+            @include tamaños (2.8125rem, 2.8125rem);
+            line-height: 2.8125rem;
             color: black;
-            margin-right: 10px;
+            margin-right: 0.625rem;
             background-color: rgb(230, 230, 230);
             text-align: center;
             transition: all 300ms ease;
@@ -104,8 +220,8 @@ body{
         }
     }
     .grupo-2{
-        background-color: rgba(119, 119, 119, 0.671);
-        padding: 15px 15px;
+        background-color: map-get($map: $colores, $key: fondoCopyright);
+        padding: 0.9375rem 0.9375rem;
         text-align: center;
         small{
             font-size: 0.9375rem
@@ -114,13 +230,19 @@ body{
 }
 /* Fin Footer */
 
-
+/* Inicio Media Queries */
 @media screen and (max-width: 768px) {
+    .slide-content{
+        margin: 0 0.625rem;
+    }
+    .swiper-navBtn{
+        display: none;
+    }
     .pie-pagina .grupo-1{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding: 35px 0px;
+        grid-gap: 1.875rem;
+        padding: 2.1875rem 0rem;
     }
 
     .pie-pagina .grupo-1 .box h2{
@@ -132,3 +254,4 @@ body{
         justify-content: center;
     }
 }
+/* Fin Media Queries */
