@@ -13,24 +13,26 @@
     box-sizing: border-box;
 }
 /* Inicio Nav */
-.navbar-brand{
-    font-family: 'Fredoka One';
-    font-weight: $fuenteBold;
-    font-size: 1.56rem;
+header{
+    nav{
+        background-image: $fondoNavbody;
+        background-attachment: $bgAtt;
+        background-size: $bgSize;
+        .nav-link{
+        font-family: $fuente;
+        font-weight: $fuenteBold;
+        font-size: 1.50rem;
+        } 
+    }
 }
 
-.nav-link{
-    font-family: $fuente;
-    font-weight: $fuenteBold;
-    font-size: 1.50rem;
-}
 /* Fin Nav */
 /* Inicio Body */
 body{
-    background-image: url('../media/fondo1.jpg');
-    background-attachment: fixed;
+    background-image: $fondoNavbody;
+    background-attachment: $bgAtt;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: $bgSize;
 }
 /* Fin Body */
 
@@ -126,7 +128,7 @@ body{
                 @extend ::before;
             }
         }
-          
+        
         .swiper-button-next{
             right: 0;
         }
@@ -147,6 +149,17 @@ body{
 }
   
 /* Fin Opiniones */
+#container-inflables,
+#container-galeria,
+#container-servicios,
+#carousel-inicio{
+  padding-top: 7em;
+}
+
+#titulo-opiniones{
+    padding-top: 4em;
+}
+
 .text-center,
 .card-title,
 .pregunta{

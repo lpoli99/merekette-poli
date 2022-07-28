@@ -1,7 +1,5 @@
 *,
 *:before,
-.opiniones .slide-container .swiper-navBtn::after,
-.opiniones .slide-container .slide-content .card .image-content .overlay::after,
 *:after {
   margin: 0;
   padding: 0;
@@ -10,13 +8,12 @@
 }
 
 /* Inicio Nav */
-.navbar-brand {
-  font-family: "Fredoka One";
-  font-weight: bold;
-  font-size: 1.56rem;
+header nav {
+  background-image: url("../media/fondo1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
-
-.nav-link {
+header nav .nav-link {
   font-family: "Grandstander";
   font-weight: bold;
   font-size: 1.5rem;
@@ -139,6 +136,17 @@ body {
 }
 
 /* Fin Opiniones */
+#container-inflables,
+#container-galeria,
+#container-servicios,
+#carousel-inicio {
+  padding-top: 7em;
+}
+
+#titulo-opiniones {
+  padding-top: 4em;
+}
+
 .text-center,
 .card-title,
 .pregunta {
