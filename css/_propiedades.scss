@@ -1,3 +1,8 @@
+@mixin tamaños ($height, $width) {
+    height: $height;
+    width: $width;
+}
+
 $fuente: "Grandstander";
 $fuenteBold: bold;
 $fondoNavbody: url('../media/fondo1.jpg');
@@ -18,4 +23,6 @@ $colores:(
     whatsapp: #25D366,
     fondoCopyright: rgba(119, 119, 119, 0.671),
 )
+
+
 

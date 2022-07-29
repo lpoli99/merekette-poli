@@ -1,8 +1,4 @@
-@import "variables";
-@mixin tamaños ($height, $width) {
-    height: $height;
-    width: $width;
-}
+@import "propiedades";
 
 *,
 *:before,
@@ -162,7 +158,8 @@ body{
 
 .text-center,
 .card-title,
-.pregunta{
+.pregunta,
+h3{
     font-family: $fuente;
     font-weight: $fuenteBold;
 }
@@ -181,7 +178,7 @@ body{
     font-family: $fuente;
 }
 
-
+/* Fin Main */
 /* Inicio Footer */
 .pie-pagina{
     width: 100%;

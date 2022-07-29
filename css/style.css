@@ -149,7 +149,8 @@ body {
 
 .text-center,
 .card-title,
-.pregunta {
+.pregunta,
+h3 {
   font-family: "Grandstander";
   font-weight: bold;
 }
@@ -168,6 +169,7 @@ body {
   font-family: "Grandstander";
 }
 
+/* Fin Main */
 /* Inicio Footer */
 .pie-pagina {
   width: 100%;
